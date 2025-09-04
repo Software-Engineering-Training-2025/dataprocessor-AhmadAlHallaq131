@@ -15,6 +15,7 @@ public class P90NearestRankAnalyzer implements AnalysisStrategy{
                 .collect(Collectors.toList());
         int length = data.size();
         Integer rank = (int) Math.ceil(.9*length);
+
         return (double) data.get(rank-1);
     }
 }

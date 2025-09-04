@@ -16,7 +16,6 @@ public class MedianAnalyzer implements AnalysisStrategy{
                 .collect(Collectors.toList());
         int length = data.size();
         if((length&1) == 0){
-            System.out.println(data);
             return (double) ((data.get(length/2) + data.get((length/2)-1))/2);
         }else {
             return (double) data.get(length/2);

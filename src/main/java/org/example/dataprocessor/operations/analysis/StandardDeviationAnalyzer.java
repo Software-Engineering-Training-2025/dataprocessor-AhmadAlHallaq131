@@ -9,10 +9,9 @@ public class StandardDeviationAnalyzer implements AnalysisStrategy{
         if (data.size() == 0){
             return Double.NaN;
         }
-        int length = data.size();
 
-        AnalysisStrategy meanAnalyzer = new MeanAnalyzer();
-        Double mean = meanAnalyzer.analyze(data);
+        int length = data.size();
+        Double mean = new MeanAnalyzer().analyze(data);
 
         double STD = data.stream()
                 .mapToDouble(x -> Math.pow(x - mean, 2))
